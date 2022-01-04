@@ -1,5 +1,5 @@
 {
-  "name": "voyage",
+  "name": "allocine",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,9 +7,15 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "eslint": "eslint",
+    "template:check": "vue-tsc --noEmit --target es2017",
+    "format": "prettier --write \"{src,tests}/**/*.+(vue|ts|js|json|html|css)\"",
+    "postinstall": "npm run format"
   },
   "dependencies": {
+    "bootstrap": "5.1.1",
+    "font-awesome": "4.7.0",
     "vue": "^3.2.6",
     "vue-router": "^4.0.3"
   },
